@@ -1,0 +1,229 @@
+* {
+    font-family: "Catamaran", sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Tillana", cursive;
+  }
+  
+  .cont-logo img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .boton-a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  #id-body {
+    background-image: url(../assets/resumen-superficie-texturas-muro-piedra-hormigon-blanco.jpg);
+    background-size: 100%;
+    background-repeat: auto;
+  }
+  
+  .f-link {
+    list-style: none;
+  }
+  
+  .col {
+    margin-top: 100px;
+  }
+  
+  .btn-index {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .img-menu-nav {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .text_center_img {
+    width: 100%;
+  }
+  .text_center p {
+    font-size: 18px;
+    text-align: center;
+    margin: 30px 0 30px;
+  }
+  .text_center h1 {
+    text-align: center;
+    padding: 50px 0 50px;
+  }
+  
+  .col_principal p {
+    font-size: 18px;
+    text-align: center;
+    padding: 40px 30px 0 30px;
+    letter-spacing: 2px;
+  }
+  
+  .row_secundaria img {
+    height: 75%;
+    width: 100%;
+    justify-content: center;
+  }
+  .row_secundaria p {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  #formulario-js {
+    display:grid;
+    justify-content: center;
+    padding: 80px 30px 30px 80px;
+
+    
+  }
+
+  #formulario-js h3 {
+    text-align: center;
+  }
+
+.servicios_intro {
+  display:grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+  grid-template-rows: 400px;
+  text-align: center;
+  row-gap: 60px;
+  padding: 30px;
+  justify-content: center;
+
+}
+
+.servicios_text{
+  grid-column: 1/4;
+  align-self: center;
+}
+
+.servicios_img {
+  height: 100%;
+  width: 100%;
+  justify-content: right;
+  grid-column: 4/6;
+  align-self: center;
+
+}
+
+  #shopContent{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: center;
+    
+    
+  }
+
+  .card{
+    max-width: auto;
+    margin: auto;
+    text-align: center;
+
+  }
+  
+  .card button {
+    border: none;
+
+  }
+
+  .modal-container{
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    background-color: #D9CCC5;
+    color: #8C6E5D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+  }
+
+  .modal-header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #8C6E5D;
+    color: #D9CCC5;
+  }
+
+  .modal-header-tittle {
+    justify-self: start;
+  }
+
+  .modal-header-button{
+    cursor: pointer;
+  }
+
+  .modal-cotainer > .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+  }
+
+  .total-content {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #8C6E5D;
+    color: #D9CCC5;
+  }
+
+
+
+  
+  @media only screen and (min-width: 577px) and (max-width: 991px) {
+    .container_index {
+      display: flex;
+      flex-direction: column;
+    }
+    .container_index .row {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+    }
+    .container_index .row .col_principal {
+      width: 100%;
+    }
+    #atributo_servicios {
+      display: flex;
+      flex-direction: column;
+    }
+    #atributo_servicios img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+  @media only screen and (max-width: 576px) {
+    .container_index {
+      display: flex;
+      flex-direction: column;
+    }
+    .container_index h1 {
+      font-size: 32px;
+    }
+    .container_index .row {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+    }
+    .container_index .row .col_principal {
+      width: 100%;
+    }
+    .container_index .row .col_principal p {
+      padding: 0;
+    }
+  }
+}
