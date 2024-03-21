@@ -26,9 +26,10 @@ const pintarCarrito = () => {
         carritoContent.innerHTML = `
         <h3> ${product.nombre}</h3>
         <p>$ ${product.precio}  </p>
-        <span class="sumar"> + </span>
+        <span class="restar"> ➖ </span>
         <p>Cantidad: ${product.cantidad}</p>
-        <span class="restar"> - </span>
+        <span class="sumar"> ➕ </span>
+        
         <p>Total: ${product.cantidad * product.precio}</p>
         `;
 
@@ -70,8 +71,38 @@ const pintarCarrito = () => {
     totalBuying.className ="total-content"
     totalBuying.innerHTML =`total a pagar: $ ${total} `;
     modalContainer.append(totalBuying);
+    
+    
+    if (carrito.length > 0) {
+        
+        const botonCompra = document.createElement("button");
+        botonCompra.innerText = "Comprar";
+        botonCompra.className = "boton-compra";
+        botonCompra.addEventListener("click", () => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Compra exitosa',
+                text: 'Recibirás la factura en tu dirección de correo. ¡Gracias por tu compra!',
+                showCancelButton: false,
+                confirmButtonText: 'Ok'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    carrito = [];
+                    saveLocal();
+                    carritoCounter();
+                    pintarCarrito();
+                }
+            });
+        });
 
+    
+        modalContainer.append(botonCompra);
+    }
+
+    
 };
+
+
 
 verCarrito.addEventListener("click", pintarCarrito);
 

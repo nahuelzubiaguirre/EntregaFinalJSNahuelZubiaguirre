@@ -163,7 +163,7 @@
     cursor: pointer;
   }
 
-  .modal-cotainer > .modal-content {
+  .modal-container > .modal-content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -173,12 +173,22 @@
   }
 
   .total-content {
-    font-size: 25px;
-    padding: 20px;
+    font-size: 20px;
+    padding: 10px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
     background-color: #8C6E5D;
     color: #D9CCC5;
+  }
+
+  .boton-compra {
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #8C6E5D;
+    color: #D9CCC5;
+
   }
 
   .delete-product {
